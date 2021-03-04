@@ -6,7 +6,7 @@
 N-Katmanlı mimari yapısı ile hazırlanan, EntityFramework kullanılarak CRUD işlemlerinin yapıldığı,Web APİ,AOP ve JWT ile doğrulama yapısını içeren **Araç Kiralama Projesi**
 
 ## :pushpin:Screenshot
-<center>
+
 <p>Kullanıcı yaptığı istek  için yetkilendirilememiş ise "Yetkiniz Yok" hatası almaktadır.</p>
 ![Ekran Alıntısı](https://user-images.githubusercontent.com/34273337/110037872-10582580-7d50-11eb-96ee-5a57b133cd33.PNG)
   
@@ -27,6 +27,6 @@ N-Katmanlı mimari yapısı ile hazırlanan, EntityFramework kullanılarak CRUD 
 
  <p>Performansı belirlenen değerin altına düşen işlemler için mesaj verme </p>
 <code>< src="https://user-images.githubusercontent.com/34273337/110037022-e6eaca00-7d4e-11eb-8ea2-201269860239.PNG"></code>
-</center>
+
 
 
