@@ -8,7 +8,7 @@ N-Katmanlı mimari yapısı ile hazırlanan, EntityFramework kullanılarak CRUD 
 ## :pushpin:Screenshot
 <center>
 <p>Kullanıcı yaptığı istek  için yetkilendirilememiş ise "Yetkiniz Yok" hatası almaktadır.</p>
- <"https://user-images.githubusercontent.com/34273337/110033957-17c90000-7d4b-11eb-8bac-4b3f52d5ea75.PNG">
+(https://user-images.githubusercontent.com/34273337/110033957-17c90000-7d4b-11eb-8bac-4b3f52d5ea75.PNG)
   
  <p>Kullanıcıya metod bazında araba ekleme yetkisi verildikten sonra ekleme işlemi başarılı şekilde gerçekleşti</p> 
 <code>< src="https://user-images.githubusercontent.com/34273337/110034736-dedd5b00-7d4b-11eb-9621-276fe22f8aed.PNG"></code>
