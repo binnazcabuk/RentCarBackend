@@ -7,11 +7,26 @@ N-Katmanlı mimari yapısı ile hazırlanan, EntityFramework kullanılarak CRUD 
 
 ## :pushpin:Screenshot
 <center>
-<code>A
-  <img height="350"  src="https://user-images.githubusercontent.com/34273337/110033957-17c90000-7d4b-11eb-8bac-4b3f52d5ea75.PNG">
-  </code>
-<code><img height="350"  src="https://user-images.githubusercontent.com/34273337/107887117-d2b46980-6f14-11eb-9a78-668c50a1fdfb.PNG"></code>
-<code><img height="350"  src="https://user-images.githubusercontent.com/34273337/107887119-d34d0000-6f14-11eb-934f-2f8a0bb9c183.PNG"></code>
+  <p>Kullanıcı yaptığı istek  için yetkilendirilememiş ise "Yetkiniz Yok" hatası almaktadır.</p>
+<code> <img height="350"  src="https://user-images.githubusercontent.com/34273337/110033957-17c90000-7d4b-11eb-8bac-4b3f52d5ea75.PNG"></code>
+  
+ <p>Kullanıcıya metod bazında araba ekleme yetkisi verildikten sonra ekleme işlemi başarılı şekilde gerçekleşti</p> 
+<code><img height="350"  src="https://user-images.githubusercontent.com/34273337/110034736-dedd5b00-7d4b-11eb-9621-276fe22f8aed.PNG"></code>
+
+<p>çağrılan işlem cache de yok, ilk kez çağrılıyor veri database'den getiriliyor.</p>
+<code><img height="350"  src="https://user-images.githubusercontent.com/34273337/110035414-b1dd7800-7d4c-11eb-96ff-da0d3f564dc3.PNG"></code>
+  
+<p>aynı işlem çağrıldığında  veri cache'den getiriliyor.</p>
+<code><img height="350"  src="https://user-images.githubusercontent.com/34273337/110035914-4ea01580-7d4d-11eb-87c6-dcbe3da1a467.PNG"></code>
+  
+<p>TransactionScope işlemin geri alınması</p>
+<code><img height="350"  src="https://user-images.githubusercontent.com/34273337/110036003-6d9ea780-7d4d-11eb-8885-05285e7d1030.PNG"></code>
+ 
+<p>Silme metodu için log işlemleri  log.json dosyasına kayıt ediliyor. </p>
+<code><img height="350"  src="https://user-images.githubusercontent.com/34273337/110036381-f61d4800-7d4d-11eb-8a60-4465fc06ee30.PNG"></code>
+
+ <p>Performansı belirlenen değerin altına düşen işlemler için mesaj verme </p>
+<code><img height="350"  src="https://user-images.githubusercontent.com/34273337/110037022-e6eaca00-7d4e-11eb-8ea2-201269860239.PNG"></code>
 </center>
 
 
