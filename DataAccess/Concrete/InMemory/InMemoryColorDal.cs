@@ -16,11 +16,11 @@ namespace DataAccess.Concrete
         {
             _colors = new List<Color>
             {
-                new Color {ColorId = 1, Name = "Beyaz"},
-                new Color {ColorId = 2, Name = "Mavi"},
-                new Color {ColorId = 3, Name = "Kirmizi"},
-                new Color {ColorId = 4, Name = "Gri"},
-                new Color {ColorId = 5, Name = "Siyah"},
+                new Color {ColorId = 1, ColorName = "Beyaz"},
+                new Color {ColorId = 2, ColorName = "Mavi"},
+                new Color {ColorId = 3, ColorName = "Kirmizi"},
+                new Color {ColorId = 4, ColorName = "Gri"},
+                new Color {ColorId = 5, ColorName = "Siyah"},
             };
         }
         public void Add(Color color)
@@ -59,7 +59,7 @@ namespace DataAccess.Concrete
             var colorToUpdate = _colors.SingleOrDefault(c => c.ColorId == color.ColorId);
 
             colorToUpdate.ColorId = color.ColorId;
-            colorToUpdate.Name = color.Name;
+            colorToUpdate.ColorName = color.ColorName;
         }
     }
 }

@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Core.Utilities.Security.Jwt
+{
+    public class AccessToken
+    {
+
+        public string Token { get; set; }
+        //token bitiş süresi
+        public DateTime Expiration { get; set; }
+
+    }
+}

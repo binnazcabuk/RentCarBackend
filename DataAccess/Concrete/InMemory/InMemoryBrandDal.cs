@@ -16,11 +16,11 @@ namespace DataAccess.Concrete
         {
             _brands = new List<Brand>
             {
-                new Brand{BrandId = 1, Name = "Ford", Model = "Focus"},
-                new Brand{BrandId = 2, Name = "BMW", Model = "M 39"},
-                new Brand{BrandId = 3, Name = "AUDI", Model = "A3 SPORTBACK"},
-                new Brand{BrandId = 4, Name = "TOYOTA", Model = "COROLLA"},
-                new Brand{BrandId = 5, Name = "RANGE ROVER", Model = "VOGUE"},
+                new Brand{BrandId = 1, BrandName = "Ford", Model = "Focus"},
+                new Brand{BrandId = 2, BrandName = "BMW", Model = "M 39"},
+                new Brand{BrandId = 3, BrandName = "AUDI", Model = "A3 SPORTBACK"},
+                new Brand{BrandId = 4, BrandName = "TOYOTA", Model = "COROLLA"},
+                new Brand{BrandId = 5, BrandName = "RANGE ROVER", Model = "VOGUE"},
             };
         }
         public void Add(Brand brand)
@@ -60,7 +60,7 @@ namespace DataAccess.Concrete
 
             brandToUpdate.BrandId = brand.BrandId;
             brandToUpdate.Model = brand.Model;
-            brandToUpdate.Name = brand.Name;
+            brandToUpdate.BrandName = brand.BrandName;
         }
     }
 }

@@ -13,8 +13,8 @@ namespace Business.ValidationRules.FluentValidation
             RuleFor(b => b.Model).NotEmpty();
             RuleFor(b => b.Model).MinimumLength(2).WithMessage("Model min 2 harf olmali");
 
-            RuleFor(b => b.Name).NotEmpty();
-            RuleFor(b => b.Name).MinimumLength(2).WithMessage("Name min 2 harf olmali");
+            RuleFor(b => b.BrandName).NotEmpty();
+            RuleFor(b => b.BrandName).MinimumLength(2).WithMessage("Name min 2 harf olmali");
         }
     }
 }

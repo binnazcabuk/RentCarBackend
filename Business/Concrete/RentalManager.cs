@@ -6,6 +6,7 @@ using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
@@ -24,9 +25,19 @@ namespace Business.Concrete
         [ValidationAspect(typeof(RentalValidator))]
         public IResult Add(Rental rental)
         {
-            _rentalDal.Add(rental);
-            return new SuccessResult(Messages.RentalAdded);
-         
+            var re = _rentalDal.GetAll(r => r.CarId == rental.CarId && r.ReturnDate == null);
+            if (re.Count > 0)
+            {
+                return new ErrorResult(Messages.RentalEror);
+
+            }
+            else
+            {
+
+                _rentalDal.Add(rental);
+                return new SuccessResult(Messages.RentalAdded);
+            }
+
         }
 
         public IResult Delete(Rental rental)
@@ -44,6 +55,7 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<Rental>(_rentalDal.Get(r => r.Id == id));
         }
+
 
         public IResult Update(Rental rental)
         {

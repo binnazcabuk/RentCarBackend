@@ -76,9 +76,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("getcarsbybrandid")]
-        public IActionResult GetCarsByBrandId(int brandId)
+        public IActionResult GetCarsByBrandId(int id)
         {
-            var result = _carService.GetCarsByBrandId(brandId);
+            var result = _carService.GetCarsByBrandId(id);
             if (result.Success)
             {
                 return Ok(result);
@@ -108,5 +108,15 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
+        [HttpPost("addtransactiontest")]
+        public IActionResult AddTrancactionTest(Car car)
+        {
+            var result = _carService.AddTransactionTest(car);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
     }
 }

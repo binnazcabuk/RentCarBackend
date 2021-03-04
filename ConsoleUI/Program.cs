@@ -75,12 +75,12 @@ namespace ConsoleUI
             //brandManager.Add(new Brand { Name = "Tesla", Model = "5" });
             foreach (var brand in brandManager.GetAll().Data)
             {
-                Console.WriteLine(brand.Name + " " + brand.Model);
+                Console.WriteLine(brand.BrandName + " " + brand.Model);
             }
             //brandManager.Delete(brandManager.GetById(3));
             foreach (var brand in brandManager.GetAll().Data)
             {
-                Console.WriteLine(brand.Name + " " + brand.Model);
+                Console.WriteLine(brand.BrandName + " " + brand.Model);
             }
         }
 
@@ -89,12 +89,12 @@ namespace ConsoleUI
             //colorManager.Add(new Color {Name = "Turuncu"});
             foreach (var color in colorManager.GetAll().Data)
             {
-                Console.WriteLine(color.Name + " : " + color.ColorId.ToString());
+                Console.WriteLine(color.ColorName + " : " + color.ColorId.ToString());
             }
             //colorManager.Delete(colorManager.GetById(1002));
             foreach (var color in colorManager.GetAll().Data)
             {
-                Console.WriteLine(color.Name);
+                Console.WriteLine(color.ColorName);
             }
         }
 
@@ -112,9 +112,9 @@ namespace ConsoleUI
             foreach (var car in carManager.GetAll().Data)
             {
                 Console.WriteLine("Arac Id: "+car.CarId + "-->" +
-                                  "Marka: "+brandManager.GetById(car.BrandId).Data.Name + " " +
+                                  "Marka: "+brandManager.GetById(car.BrandId).Data.BrandName + " " +
                                   "Model: "+brandManager.GetById(car.BrandId).Data.Model + " " +
-                                  "Renk: "+colorManager.GetById(car.ColorId).Data.Name + " " +
+                                  "Renk: "+colorManager.GetById(car.ColorId).Data.ColorName + " " +
                                   "Yil: "+car.ModelYear + " " +
                                   "Aciklama: "+car.Description);
             }
@@ -126,9 +126,9 @@ namespace ConsoleUI
             foreach (var car in carManager.GetCarsByColorId(i).Data)
             {
                 Console.WriteLine("Arac Id: " + car.CarId + ":" +
-                                  brandManager.GetById(car.BrandId).Data.Name + " " +
+                                  brandManager.GetById(car.BrandId).Data.BrandName + " " +
                                   brandManager.GetById(car.BrandId).Data.Model + " " +
-                                  colorManager.GetById(car.ColorId).Data.Name + " " +
+                                  colorManager.GetById(car.ColorId).Data.ColorName + " " +
                                   car.ModelYear + " " +
                                   car.Description);
             }
@@ -140,9 +140,9 @@ namespace ConsoleUI
             foreach (var car in carManager.GetCarsByBrandId(i).Data)
             {
                 Console.WriteLine("Arac Id: " + car.CarId + ":" +
-                                  brandManager.GetById(car.BrandId).Data.Name + " " +
+                                  brandManager.GetById(car.BrandId).Data.BrandName + " " +
                                   brandManager.GetById(car.BrandId).Data.Model + " " +
-                                  colorManager.GetById(car.ColorId).Data.Name + " " +
+                                  colorManager.GetById(car.ColorId).Data.ColorName + " " +
                                   car.ModelYear + " " +
                                   car.Description);
             }

@@ -39,6 +39,7 @@ namespace Business.Contants
         public static string RentalsListed = "Kiralamalar Listelendi";
         public static string RentalDeleted = "Kiralama Silindi";
         public static string RentalUpdated = "Kiralama Guncellendi";
+        public static string RentalEror = "araba teslim edilmedi";
 
         public static string ImageAdded = "Resim Eklendi";
         public static string ImagesListed = "Resimler Listelendi";
@@ -48,5 +49,13 @@ namespace Business.Contants
         public static string CarImageCountOfCarError = "Fotograf hatasi";
 
         public static string CarImageLimitExceeded = "CarImage Limit Exceeded";
+        public static string AuthorizationDenied = "Yetkiniz Yok";
+
+        public static string UserRegistered = "Kayıt olundu";
+        public static string UserNotFound = "Kullanıcı Bulunamadı";
+        public static string PasswordError = "Parola hatası";
+        public static string SuccessfulLogin = "Başarılı Giriş";
+        public static string UserAlreadyExists = "Kullanıcı Mevcut";
+        public static string AccessTokenCreated = "Token oluşturuldu";
     }
 }
