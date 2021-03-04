@@ -7,26 +7,25 @@ N-Katmanlı mimari yapısı ile hazırlanan, EntityFramework kullanılarak CRUD 
 
 ## :pushpin:Screenshot
 
-### Kullanıcı yaptığı istek  için yetkilendirilememiş ise "Yetkiniz Yok" hatası almaktadır.
+### Kullanıcı yaptığı istek  için yetkilendirilmemiş ise "Yetkiniz Yok" hatası almaktadır.
 ![Ekran Alıntısı](https://user-images.githubusercontent.com/34273337/110037872-10582580-7d50-11eb-96ee-5a57b133cd33.PNG)
   
- <p>Kullanıcıya metod bazında araba ekleme yetkisi verildikten sonra ekleme işlemi başarılı şekilde gerçekleşti</p> 
-<code>< src="https://user-images.githubusercontent.com/34273337/110034736-dedd5b00-7d4b-11eb-9621-276fe22f8aed.PNG"></code>
+### Kullanıcıya metod bazında araba ekleme yetkisi verildikten sonra ekleme işlemi başarılı şekilde gerçekleşti.
+![1](https://user-images.githubusercontent.com/34273337/110038142-66c56400-7d50-11eb-8f53-7c8b1ccf54b8.PNG)
 
-<p>çağrılan işlem cache de yok, ilk kez çağrılıyor veri database'den getiriliyor.</p>
-<code>< src="https://user-images.githubusercontent.com/34273337/110035414-b1dd7800-7d4c-11eb-96ff-da0d3f564dc3.PNG"></code>
-  
-<p>aynı işlem çağrıldığında  veri cache'den getiriliyor.</p>
-<code>< src="https://user-images.githubusercontent.com/34273337/110035914-4ea01580-7d4d-11eb-87c6-dcbe3da1a467.PNG"></code>
-  
-<p>TransactionScope işlemin geri alınması</p>
-<code><  src="https://user-images.githubusercontent.com/34273337/110036003-6d9ea780-7d4d-11eb-8885-05285e7d1030.PNG"></code>
+### Çağrılan işlem cache de yok, ilk kez çağrılıyor veri database'den getiriliyor.
+![2](https://user-images.githubusercontent.com/34273337/110038229-83619c00-7d50-11eb-995b-3cbbe0be2402.PNG)
+
+### Aynı işlem çağrıldığında  veri cache'den getiriliyor.
+![3](https://user-images.githubusercontent.com/34273337/110038287-97a59900-7d50-11eb-8d59-70aae7099819.PNG)
+
+### TransactionScope işlemin geri alınması
+![4](https://user-images.githubusercontent.com/34273337/110038369-b4da6780-7d50-11eb-88df-01da954ea8a0.PNG)
  
-<p>Silme metodu için log işlemleri  log.json dosyasına kayıt ediliyor. </p>
-<code><  src="https://user-images.githubusercontent.com/34273337/110036381-f61d4800-7d4d-11eb-8a60-4465fc06ee30.PNG"></code>
+### Silme metodu için log işlemleri  log.json dosyasına kayıt ediliyor. 
+![5](https://user-images.githubusercontent.com/34273337/110038398-c28fed00-7d50-11eb-9c6e-2fcf17fbd1bd.PNG)
 
- <p>Performansı belirlenen değerin altına düşen işlemler için mesaj verme </p>
-<code>< src="https://user-images.githubusercontent.com/34273337/110037022-e6eaca00-7d4e-11eb-8ea2-201269860239.PNG"></code>
-
+### Performansı belirlenen değerin altına düşen işlemler için mesaj verme 
+![6](https://user-images.githubusercontent.com/34273337/110038446-d0de0900-7d50-11eb-8b14-93946c05a194.PNG)
 
 
