@@ -3,7 +3,7 @@
 📚Engin Demiroğ eğitmenliğinde devam etmekde olan bir yazılım geliştirici yetiştirme kampıdır.
 
 ## :pushpin:Getting Started
-N-Katmanlı mimari yapısı ile hazırlanan, EntityFramework kullanılarak CRUD işlemlerinin yapıldığı,Web APİ,AOP ve JWT ile doğrulama yapısını içeren **Araç Kiralama Projesi**
+N-Katmanlı mimari yapısı ile hazırlanan, EntityFramework kullanılarak CRUD işlemlerinin yapıldığı,Web APİ,AOP,JWT ile doğrulama,Cache,Logging,Performance,Transactions yapısını içeren **Araç Kiralama Projesi**
 
 ## :pushpin:Screenshot
 
