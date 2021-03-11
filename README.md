@@ -3,13 +3,29 @@
 📚Engin Demiroğ eğitmenliğinde devam etmekde olan bir yazılım geliştirici yetiştirme kampıdır.
 
 ## :pushpin:Getting Started
-N-Katmanlı mimari yapısı ile hazırlanan, EntityFramework kullanılarak CRUD işlemlerinin yapıldığı,Web APİ,AOP ve JWT ile doğrulama yapısını içeren **Araç Kiralama Projesi**
+N-Katmanlı mimari yapısı ile hazırlanan, EntityFramework kullanılarak CRUD işlemlerinin yapıldığı,Web APİ,AOP,JWT ile doğrulama,Cache,Logging,Performance,Transactions yapısını içeren **Araç Kiralama Projesi**
 
 ## :pushpin:Screenshot
-<center>
-<code><img height="350"  src="https://user-images.githubusercontent.com/34273337/107887116-d1833c80-6f14-11eb-8581-7b535661b981.PNG"></code>
-<code><img height="350"  src="https://user-images.githubusercontent.com/34273337/107887117-d2b46980-6f14-11eb-9a78-668c50a1fdfb.PNG"></code>
-<code><img height="350"  src="https://user-images.githubusercontent.com/34273337/107887119-d34d0000-6f14-11eb-934f-2f8a0bb9c183.PNG"></code>
-</center>
+
+### Kullanıcı yaptığı istek  için yetkilendirilmemiş ise "Yetkiniz Yok" hatası almaktadır.
+![Ekran Alıntısı](https://user-images.githubusercontent.com/34273337/110037872-10582580-7d50-11eb-96ee-5a57b133cd33.PNG)
+  
+### Kullanıcıya metod bazında araba ekleme yetkisi verildikten sonra ekleme işlemi başarılı şekilde gerçekleşti.
+![1](https://user-images.githubusercontent.com/34273337/110038142-66c56400-7d50-11eb-8f53-7c8b1ccf54b8.PNG)
+
+### Çağrılan işlem cache de yok, ilk kez çağrılıyor veri database'den getiriliyor.
+![2](https://user-images.githubusercontent.com/34273337/110038229-83619c00-7d50-11eb-995b-3cbbe0be2402.PNG)
+
+### Aynı işlem çağrıldığında  veri cache'den getiriliyor.
+![3](https://user-images.githubusercontent.com/34273337/110038287-97a59900-7d50-11eb-8d59-70aae7099819.PNG)
+
+### TransactionScope işlemin geri alınması
+![4](https://user-images.githubusercontent.com/34273337/110038369-b4da6780-7d50-11eb-88df-01da954ea8a0.PNG)
+ 
+### Silme metodu için log işlemleri  log.json dosyasına kayıt ediliyor. 
+![5](https://user-images.githubusercontent.com/34273337/110038398-c28fed00-7d50-11eb-9c6e-2fcf17fbd1bd.PNG)
+
+### Performansı belirlenen değerin altına düşen işlemler için mesaj verme 
+![6](https://user-images.githubusercontent.com/34273337/110038446-d0de0900-7d50-11eb-8b14-93946c05a194.PNG)
 
 
