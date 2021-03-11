@@ -16,6 +16,7 @@ using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace Business.Concrete
 {
@@ -26,12 +27,14 @@ namespace Business.Concrete
         {
             _carDal = carDal;
         }
-
-       
+        [LogAspect(typeof(FileLogger))]
+        [PerformanceAspect(1)]
         public IDataResult<List<Car>> GetAll()
         {
             return new SuccessDataResult<List<Car>>(_carDal.GetAll());
         }
+
+        [PerformanceAspect(1)]
         public IDataResult<Car> GetById(int id)
         {
             return new SuccessDataResult<Car>(_carDal.Get(c => c.CarId == id));
@@ -42,7 +45,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.ColorId == colorId));
         }
 
-        [PerformanceAspect(5)]
+        [PerformanceAspect(1)]
         [CacheAspect]
         public IDataResult<List<Car>> GetCarsByBrandId(int id)
         {
@@ -51,6 +54,7 @@ namespace Business.Concrete
 
         public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
+            Thread.Sleep(5000);
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails());
         }
 

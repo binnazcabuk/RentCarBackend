@@ -40,6 +40,8 @@ namespace Core.Extension
                     Name = invocation.GetConcreteMethod().GetParameters()[i].Name,
                     Value = invocation.Arguments[i],
                     Type = invocation.Arguments[i].GetType().Name
+                   
+
                 });
             }
 
