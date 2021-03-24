@@ -1,11 +1,11 @@
 #  **Araç Kiralama Projesi**
 
-## <center> ![Rent-Car](https://user-images.githubusercontent.com/34273337/112353462-ce7e2780-8cdc-11eb-8bc9-56a9f8d6bc0d.jpg)</center>
-
+## <p align="center"> ![Rent-Car](https://user-images.githubusercontent.com/34273337/112353462-ce7e2780-8cdc-11eb-8bc9-56a9f8d6bc0d.jpg)</p>
+N-Katmanlı mimari yapısı ile hazırlanmış, EntityFramework kullanılarak CRUD işlemlerinin yapıldığı,Web APİ,AOP,JWT ile doğrulama,Cache,Logging,Performance,Transactions yapısını içeren bir projedir.
 
 ## :pushpin:Getting Started
 ![About](https://user-images.githubusercontent.com/34273337/112353263-a42c6a00-8cdc-11eb-9c99-f24a3f2cc1bd.png)
-N-Katmanlı mimari yapısı ile hazırlanmış, EntityFramework kullanılarak CRUD işlemlerinin yapıldığı,Web APİ,AOP,JWT ile doğrulama,Cache,Logging,Performance,Transactions yapısını içeren bir projedir.
+
 ## Used Technologies and Their Versions
 [![C-Sharp](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)](https://docs.microsoft.com/en-us/dotnet/csharp/)
 [![Asp-net-web-api](https://img.shields.io/badge/ASP.NET%20Web%20API-5C2D91?style=for-the-badge&logo=.net&logoColor=white)](https://dotnet.microsoft.com/apps/aspnet)
