@@ -11,7 +11,7 @@ N-Katmanlı mimari yapısı ile hazırlanmış, EntityFramework kullanılarak CR
 [![Entity-Framework-Core](https://img.shields.io/badge/Entity%20Framework%20Core%20v3.1.1-004880?style=for-the-badge&logo=nuget&logoColor=white)](https://docs.microsoft.com/en-us/ef/)
 [![Autofac](https://img.shields.io/badge/Autofac%20v6.1-004880?style=for-the-badge&logo=nuget&logoColor=white)](https://autofac.org/)
 [![Fluent-Validation](https://img.shields.io/badge/Fluent%20Validation%20v9.5.1-004880?style=for-the-badge&logo=nuget&logoColor=white)](https://fluentvalidation.net/)
-[![log4net](https://img.shields.io/badge/log4net%20v2.0.12-004880?style=for-the-badge&logo=nuget&logoColor=white)(http://logging.apache.org/log4net/)
+[![log4net](https://img.shields.io/badge/log4net%20v2.0.12-004880?style=for-the-badge&logo=nuget&logoColor=white)
 ## :pushpin:Screenshot
 
 ### Kullanıcı yaptığı istek  için yetkilendirilmemiş ise "Yetkiniz Yok" hatası almaktadır.
