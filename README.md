@@ -1,6 +1,6 @@
 #  **Araç Kiralama Projesi**
 
-##  https://user-images.githubusercontent.com/34273337/112353462-ce7e2780-8cdc-11eb-8bc9-56a9f8d6bc0d.jpg
+##  ![Rent-Car](https://user-images.githubusercontent.com/34273337/112353462-ce7e2780-8cdc-11eb-8bc9-56a9f8d6bc0d.jpg)
 
 
 ## :pushpin:Getting Started
