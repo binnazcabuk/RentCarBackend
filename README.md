@@ -1,5 +1,6 @@
 #  **Araç Kiralama Projesi**
-<p align="center"> https://user-images.githubusercontent.com/34273337/112353462-ce7e2780-8cdc-11eb-8bc9-56a9f8d6bc0d.jpg</p>
+
+## <p align="center"> https://user-images.githubusercontent.com/34273337/112353462-ce7e2780-8cdc-11eb-8bc9-56a9f8d6bc0d.jpg</p>
 
 ## :pushpin:Getting Started
 ![About](https://user-images.githubusercontent.com/34273337/112353263-a42c6a00-8cdc-11eb-9c99-f24a3f2cc1bd.png)
