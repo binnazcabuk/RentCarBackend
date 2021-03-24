@@ -1,8 +1,8 @@
 
-## ![Ekran Alıntısı](https://user-images.githubusercontent.com/34273337/107855830-c9080480-6e35-11eb-8071-5f01ea0623d1.PNG)
-📚Engin Demiroğ eğitmenliğinde devam etmekde olan bir yazılım geliştirici yetiştirme kampıdır.
+## ![Rent-Car](https://user-images.githubusercontent.com/34273337/112353014-5dd70b00-8cdc-11eb-9afd-1b7f9e56a75e.jpg)
 
 ## :pushpin:Getting Started
+![About](https://user-images.githubusercontent.com/34273337/112353263-a42c6a00-8cdc-11eb-9c99-f24a3f2cc1bd.png)
 N-Katmanlı mimari yapısı ile hazırlanan, EntityFramework kullanılarak CRUD işlemlerinin yapıldığı,Web APİ,AOP,JWT ile doğrulama,Cache,Logging,Performance,Transactions yapısını içeren **Araç Kiralama Projesi**
 
 ## :pushpin:Screenshot
