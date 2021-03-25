@@ -6,7 +6,7 @@ using System;
 
 namespace ConsoleUI
 {
-    class Program
+  public  class Program
     {
         static CarManager carManager;
         static BrandManager brandManager;
@@ -15,8 +15,10 @@ namespace ConsoleUI
         static RentalManager rentalManager;
         static UserManager userManager;
 
-        static void Main(string[] args)
+      public  static void Main(string[] args)
         {
+        
+
             carManager = new CarManager(new EfCarDal());
             brandManager = new BrandManager(new EfBrandDal());
             colorManager = new ColorManager(new EfColorDal());
@@ -29,8 +31,9 @@ namespace ConsoleUI
             //brandManagerTest();
             //colorManagerTest();
             //DetailsTest();
-            //ResultTest();
-           
+            // ResultTest();
+
+            Console.ReadLine();
         }
 
         private static void ResultTest()
@@ -42,6 +45,7 @@ namespace ConsoleUI
                 foreach (var car in carManager.GetCarDetails().Data)
                 {
                     Console.WriteLine(car.BrandName + "\t" + car.CarName);
+                   
                 }
             }
         }

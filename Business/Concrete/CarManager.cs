@@ -34,27 +34,12 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Car>>(_carDal.GetAll());
         }
 
-        [PerformanceAspect(1)]
-        public IDataResult<Car> GetById(int id)
-        {
-            return new SuccessDataResult<Car>(_carDal.Get(c => c.CarId == id));
-        }
-
-        public IDataResult<List<Car>> GetCarsByColorId(int colorId)
-        {
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.ColorId == colorId));
-        }
+   
 
         [PerformanceAspect(1)]
-        [CacheAspect]
-        public IDataResult<List<Car>> GetCarsByBrandId(int id)
-        {
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.BrandId == id));
-        }
-
         public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
-            Thread.Sleep(5000);
+           
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails());
         }
 
@@ -78,6 +63,7 @@ namespace Business.Concrete
             _carDal.Update(car);
             return new SuccessResult(Messages.CarUpdated);
         }
+      
         [TransactionScopeAspect]
         public IResult AddTransactionTest(Car car)
         {
@@ -90,6 +76,33 @@ namespace Business.Concrete
             Add(car);
             return new SuccessResult(Messages.CarAdded);
         }
+
+        public IDataResult<List<CarDetailDto>> GetCarsByColorId(int ColorId)
+        {
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(c => c.ColorId == ColorId));
+        }
+
+
+
+        public IDataResult<List<CarDetailDto>> GetCarsDetailByBrandId(int BrandId)
+        {
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(p => p.BrandId == BrandId));
+        }
+
+        public IDataResult<List<CarDetailDto>> GetCarDetailById(int carId)
+        {
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(p => p.CarId == carId));
+        }
+
+
+        public IDataResult<List<CarDetailDto>> GetCarDetailsFilter(int brandId, int colorId)
+        {
+            return new SuccessDataResult<List<CarDetailDto>>(
+                _carDal.GetCarDetails(c => c.BrandId == brandId && c.ColorId == colorId)
+             );
+        }
+
+
         //banka para transferi sırasında yaşanan aksaklıklarda paranın geri yatırılması buna örnek
     }
 }

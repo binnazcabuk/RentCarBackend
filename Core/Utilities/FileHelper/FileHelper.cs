@@ -19,9 +19,11 @@ namespace Core.Utilities.FileSystems
                 + "_" + DateTime.Now.Day
                 + "_" + DateTime.Now.Year + fileExtension;
 
-            string path = Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).FullName + @"\Images");
+            //  string path = Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).FullName + @"\Images");
+        
+            string path = Environment.CurrentDirectory + @"\wwwroot\Images";
 
-            string result = $@"{path}\{creatingUniqueFilename}";
+             string result = $@"{path}\{creatingUniqueFilename}";
 
             return result;
         }
