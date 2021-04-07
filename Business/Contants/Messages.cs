@@ -57,5 +57,12 @@ namespace Business.Contants
         public static string SuccessfulLogin = "Başarılı Giriş";
         public static string UserAlreadyExists = "Kullanıcı Mevcut";
         public static string AccessTokenCreated = "Token oluşturuldu";
+        public static string CustomerListed = "Müşteri Listesi Getirildi";
+        public static string RentalDateOk = "";
+        public static string RentalReturnDateError = "";
+        public static string RentalGetAllSuccess = "Tüm kiralanan araclar listeleniyor(detayları ile)";
+        public static string FindeksSuccess = "Findeks Puanı Yeterli.";
+        public static string FindeksError = "Findeks Puanı Yetersiz";
+        public static string Registered = "Kullanıcı Başarılı bir sekilde kayıt oldu.";
     }
 }

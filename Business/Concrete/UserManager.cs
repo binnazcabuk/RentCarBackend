@@ -33,6 +33,17 @@ namespace Business.Concrete
             return new SuccessDataResult<List<OperationClaim>>(_userDal.GetClaims(user));
         }
 
-      
+        public IResult Update(User user)
+        {
+            _userDal.Update(user);
+            return new SuccessResult(Messages.UserUpdated);
+        }
+
+        public IDataResult<User> GetById(int id)
+        {
+
+            return new SuccessDataResult<User>(_userDal.Get(p => p.Id == id));
+        }
+
     }
 }

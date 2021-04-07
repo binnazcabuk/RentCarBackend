@@ -18,7 +18,7 @@ namespace Entities.DTOs
         public int ColorId { get; set; }
         public string ImagePath { get; set; }
         public string Model { get; set; }
-
+        public int MinFindexScore { get; set; }
 
     }
 }

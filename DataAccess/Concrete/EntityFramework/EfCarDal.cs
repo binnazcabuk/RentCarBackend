@@ -33,6 +33,7 @@ namespace DataAccess.Concrete.EntityFramework
                                  Model=b.Model,
                                  DailyPrice = c.DailyPrice,
                                  ModelYear = c.ModelYear,
+                                 MinFindexScore = c.MinFindexScore,
                                  ImagePath = (from a in context.CarImages where a.CarId == c.CarId select a.ImagePath).FirstOrDefault()
 
                              };

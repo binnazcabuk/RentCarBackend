@@ -61,14 +61,8 @@ namespace Business.Concrete
 
         public IDataResult<List<CarImage>> GetByCarId(int carId)
         {
-            IResult result = BusinessRules.Run(CheckIfCarImageExists(carId));
-
-            if (result != null)
-            {
-                return new ErrorDataResult<List<CarImage>>(result.Message);
-            }
-
-            return new SuccessDataResult<List<CarImage>>(CheckIfCarImageExists(carId).Data);
+            
+            return new SuccessDataResult<List<CarImage>>(_carImageDal.GetAll(c=>c.CarId==carId));
         }
 
         public IDataResult<CarImage> GetById(int id)

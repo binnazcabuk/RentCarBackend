@@ -10,6 +10,7 @@ using Entities.DTOs;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 
@@ -26,18 +27,19 @@ namespace Business.Concrete
         [ValidationAspect(typeof(RentalValidator))]
         public IResult Add(Rental rental)
         {
-            var re = _rentalDal.GetAll(r => r.CarId == rental.CarId && r.ReturnDate == null);
-            if (re.Count > 0)
-            {
-                return new ErrorResult(Messages.RentalEror);
-
-            }
-            else
-            {
-
-                _rentalDal.Add(rental);
+            DateTime date = DateTime.Now;
+          
+              
+                if (rental.ReturnDate < date) { rental.Status = false;
+                
+                }
+                else
+                {
+                    rental.Status = true;
+                }
+               _rentalDal.Add(rental);
                 return new SuccessResult(Messages.RentalAdded);
-            }
+           
 
         }
 
@@ -51,6 +53,20 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(), Messages.RentalsListed);
         }
+
+        public IDataResult<RentalDetailDto> GetRentalDetailByCarId(int carId)
+        {
+
+            var result = _rentalDal.GetRentalDetails(r => r.CarId == carId).LastOrDefault();
+            return new SuccessDataResult<RentalDetailDto>(result, Messages.RentalGetAllSuccess);
+        }
+
+        public IDataResult<List<RentalDetailDto>> GetRentalsDetailByUserId(int userId)
+        {
+            var result = _rentalDal.GetRentalDetails(r => r.UserId == userId).ToList();
+            return new SuccessDataResult<List<RentalDetailDto>>(result, Messages.RentalGetAllSuccess);
+        }
+
 
         public IDataResult<Rental> GetById(int id)
         {
@@ -71,5 +87,7 @@ namespace Business.Concrete
             _rentalDal.Update(rental);
             return new SuccessResult(Messages.RentalUpdated);
         }
+
+      
     }
 }

@@ -44,7 +44,7 @@ namespace ConsoleUI
             {
                 foreach (var car in carManager.GetCarDetails().Data)
                 {
-                    Console.WriteLine(car.BrandName + "\t" + car.CarName);
+                    Console.WriteLine(car.BrandName + "\t" + car.Model);
                    
                 }
             }
@@ -56,7 +56,7 @@ namespace ConsoleUI
             Console.WriteLine("-----------------------------------------------------------");
             foreach (var car in carManager.GetCarDetails().Data)
             {
-                Console.WriteLine(car.CarName + "\t" + car.BrandName + "\t" + car.ColorName + "\t" + car.DailyPrice);
+                Console.WriteLine(car.Model + "\t" + car.BrandName + "\t" + car.ColorName + "\t" + car.DailyPrice);
             }
         }
 
@@ -108,7 +108,7 @@ namespace ConsoleUI
             Console.WriteLine("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><>");
             ShowCarsEfByColorId(1);
             Console.WriteLine("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><>");
-            ShowCarsEfByBrandId(1);
+            
         }
         public static void ShowCarsEf()
         {
@@ -137,19 +137,6 @@ namespace ConsoleUI
                                   car.Description);
             }
         }
-        public static void ShowCarsEfByBrandId(int i)
-        {
-            Console.WriteLine("BrandId= {0} OLAN ARACLAR", i);
-
-            foreach (var car in carManager.GetCarsByBrandId(i).Data)
-            {
-                Console.WriteLine("Arac Id: " + car.CarId + ":" +
-                                  brandManager.GetById(car.BrandId).Data.BrandName + " " +
-                                  brandManager.GetById(car.BrandId).Data.Model + " " +
-                                  colorManager.GetById(car.ColorId).Data.ColorName + " " +
-                                  car.ModelYear + " " +
-                                  car.Description);
-            }
-        }
+      
     }
 }

@@ -14,8 +14,12 @@ namespace Business.Abstract
         IDataResult<List<Rental>> GetByCarId(int id);
         IDataResult<Rental> GetById(int id);
         IDataResult<List<RentalDetailDto>> GetRentalDetails(Expression<Func<Rental, bool>> filter = null);
+        IDataResult<RentalDetailDto> GetRentalDetailByCarId(int carId);
+        IDataResult<List<RentalDetailDto>> GetRentalsDetailByUserId(int userId);
         IResult Add(Rental rental);
         IResult Update(Rental rental);
         IResult Delete(Rental rental);
+
+
     }
 }

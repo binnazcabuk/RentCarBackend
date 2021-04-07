@@ -31,7 +31,7 @@ namespace Core.Utilities.FileSystems
         public static string AddAsync(IFormFile file)
         {
             var result = newPath(file);
-
+            
             try
             {
                 var sourcePath = Path.GetTempFileName();
@@ -42,6 +42,7 @@ namespace Core.Utilities.FileSystems
                         file.CopyTo(stream);
                     }
                 }
+               
 
                 File.Move(sourcePath, result);
             }

@@ -70,5 +70,34 @@ namespace Business.Concrete
             var accessToken = _tokenHelper.CreateToken(user, claims.Data);
             return new SuccessDataResult<AccessToken>(accessToken, Messages.AccessTokenCreated);
         }
+
+        public IDataResult<User> Update(UserForUpdateDto userForUpdate, string password)
+        {
+            byte[] passwordHash, passwordSalt;
+            HashingHelper.CreatePasswordHash(password, out passwordHash, out passwordSalt);
+            var user = new User
+            {
+                Id = userForUpdate.Id,
+                Email = userForUpdate.Email,
+                FirstName = userForUpdate.FirstName,
+                LastName = userForUpdate.LastName,
+                PasswordHash = passwordHash,
+                PasswordSalt = passwordSalt,
+                Status = true
+
+            };
+            _userService.Update(user);
+            return new SuccessDataResult<User>(user, Messages.Registered);
+        }
+
+        public IResult ExistsId(int Id)
+        {
+            var user = _userService.GetById(Id);
+            if (user != null)
+            {
+                return new SuccessResult();
+            }
+            return new ErrorResult("kullanıcı bulunamadı");
+        }
     }
 }
