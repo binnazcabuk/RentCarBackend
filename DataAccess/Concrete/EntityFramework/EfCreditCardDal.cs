@@ -7,7 +7,8 @@ using System.Text;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfFindexDal : EfEntityRepositoryBase<Findex, CarDatabaseContext>, IFindexDal
+    public class EfCreditCardDal : EfEntityRepositoryBase<CreditCard,CarDatabaseContext>, ICreditCardDal
     {
+
     }
 }

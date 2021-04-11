@@ -6,7 +6,8 @@ using System.Text;
 
 namespace DataAccess.Abstract
 {
-    public interface IFindexDal : IEntityRepository<Findex>
+    public interface ICreditCardDal : IEntityRepository<CreditCard>
     {
+
     }
 }

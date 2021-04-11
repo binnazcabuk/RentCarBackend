@@ -15,16 +15,24 @@ namespace Business.Concrete
 {
     public class CustomerManager : ICustomerService
     {
+        Random rastgele = new Random();
         ICustomerDal _customerDal;
+      
         public CustomerManager(ICustomerDal customerDal)
         {
             _customerDal = customerDal;
+         
         }
 
         [ValidationAspect(typeof(CustomerValidator))]
         public IResult Add(Customer customer)
+
         {
+            int sayi = rastgele.Next(200,1000);
+            customer.FindexScore = sayi;
+
             _customerDal.Add(customer);
+         
             return new SuccessResult(Messages.CustomerAdded);
         }
 
@@ -41,6 +49,7 @@ namespace Business.Concrete
 
         public IDataResult<Customer> GetById(int id)
         {
+          
             return new SuccessDataResult<Customer>(_customerDal.Get(c => c.Id == id));
         }
 

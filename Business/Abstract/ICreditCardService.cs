@@ -6,10 +6,9 @@ using System.Text;
 
 namespace Business.Abstract
 {
-    public interface IFindeksService
+    public interface ICreditCardService 
     {
-
-        IDataResult<List<Findex>> GetAllByUserId(int UserId);
-
+        IDataResult<List<CreditCard>> GetAllByUserId(int UserId);
+        IResult Add(CreditCard creditCard);
     }
 }
