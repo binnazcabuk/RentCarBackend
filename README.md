@@ -1,7 +1,8 @@
 #  **Araç Kiralama Projesi**
 
 ## <p align="center"> ![Rent-Car](https://user-images.githubusercontent.com/34273337/112353462-ce7e2780-8cdc-11eb-8bc9-56a9f8d6bc0d.jpg)</p>
-**N-Katmanlı mimari yapısı ile hazırlanmış, EntityFramework kullanılarak CRUD işlemlerinin yapıldığı,Web APİ,AOP,JWT ile doğrulama,Cache,Logging,Performance,Transactions yapısını içeren bir projedir.**
+**N-Katmanlı mimari yapısı ile hazırlanmış,OOP(Object orianted progrraming), AOP (Aspect Oriented Programming) gibi programlama modelleriyle çeşitli sorunlara çözümler sunulmuştur. Diğer taraftan SOLID prensiplerine bağlı clean code olarak kodlanan,JWT ile doğrulama,Cache,Logging,Performance,Transactions yapısını içeren  bir projedir.**
+
 
 ## :pushpin:Getting Started
 ![About](https://user-images.githubusercontent.com/34273337/112353263-a42c6a00-8cdc-11eb-9c99-f24a3f2cc1bd.png)
