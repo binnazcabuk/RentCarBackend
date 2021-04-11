@@ -6,6 +6,7 @@
 **Business Layer**
  
 Api katmanından gelen isteklerin ve verilerin işlendiği katmandır. Asp .Net Core'un sunmuş olduğu built-in dependenct injection desteği yerine Autofac teknolojisi kullanılarak nesnelerin yaşam döngülerinin hem daha yetenekli hem de daha yüksek performanslı bir araçla kontrol edilmesi amaçlanmış ve kodda basitlik ve sadelik sağlanmıştır, bunlara ek olarak Autofac ile gelen castle dynamic proxy sayesinde AOP mimarisi çerçevesinde metodların ve sınıfların intercept edilebilmesini sağlayan yapı geliştirilmiştir.
+
 **Core Layer**
  
 Proje mimarisinin temel yapısnı oluşturan kısımlarının yer aldığı katmandır.Caching, exception handling, performance, transaction,log gibi yapılar bu katmanda yer almaktadır. Veri erişimi için Entity framework repository soyutlamaları ve generic yapıda bu katmanda yer almaktadır, diğer bir taraftan yer alan extensionlar sayesinde metodlar genişletilerek mimariye ve ihtiyaçlara uygun hale getirilmiştir. Ayrıca katman içindeki utilities içinde, iş kuralları yönetimi, interceptor yönetimi, güvenlik ve IoC  gibi temel yapılar yönetilmektedir.
