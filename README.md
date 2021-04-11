@@ -32,6 +32,10 @@ Projede kullanıcı veya arayüzle iletişimde olan kısımların tümünü içe
 [![Autofac](https://img.shields.io/badge/Autofac%20v6.1-004880?style=for-the-badge&logo=nuget&logoColor=white)](https://autofac.org/)
 [![Fluent-Validation](https://img.shields.io/badge/Fluent%20Validation%20v9.5.1-004880?style=for-the-badge&logo=nuget&logoColor=white)](https://fluentvalidation.net/)
 [![log4net](https://img.shields.io/badge/log4net%20v2.0.12-004880?style=for-the-badge&logo=nuget&logoColor=white)
+
+## :pushpin:Veritabanı
+![7](https://user-images.githubusercontent.com/34273337/114322293-02a07780-9b28-11eb-8d00-2c4ff4acf462.PNG)
+
 ## :pushpin:Screenshot
 
 ### Kullanıcı yaptığı istek  için yetkilendirilmemiş ise "Yetkiniz Yok" hatası almaktadır.
