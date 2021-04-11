@@ -17,7 +17,7 @@ Proje mimarisinin temel yapısnı oluşturan kısımlarının yer aldığı katm
  
 Veri tabanı işlemlerinin yapıldığı katmandır, temel görevi veriye erişmek ve ekleme, silme, güncelleme gibi temel işlemlerin yerine getirilmesidir.
  
-**API Layer**
+**WEB API**
  
 Projede kullanıcı veya arayüzle iletişimde olan kısımların tümünü içeren katmandır.Projesinin back-end tarafı web api olup çeşitli platformlarda arayüz geliştirilebilmesine olanak sağlamaktadır, api katmanı temel olarak gelen ve giden verilerin mantıklarının sağlandığı ve controllers üzerinden belli ihtiyaçlar ve işlevler için oluşturulmuş metodlardan oluşmaktadır.
 
