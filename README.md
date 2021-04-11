@@ -1,23 +1,24 @@
 #  **Araç Kiralama Projesi**
 
 ## <p align="center"> ![Rent-Car](https://user-images.githubusercontent.com/34273337/112353462-ce7e2780-8cdc-11eb-8bc9-56a9f8d6bc0d.jpg)</p>
-**N-Katmanlı mimari yapısı ile hazırlanmış,OOP(Object orianted progrraming), AOP (Aspect Oriented Programming) gibi programlama modelleriyle çeşitli sorunlara çözümler sunulmuştur. Diğer taraftan SOLID prensiplerine bağlı clean code olarak kodlanan,JWT ile doğrulama,Cache,Logging,Performance,Transactions yapısını içeren  bir projedir.**
+**N-Katmanlı mimari yapısı ile hazırlanmış,OOP(Object orianted progrraming), AOP (Aspect Oriented Programming) gibi programlama modelleriyle çeşitli sorunlara çözümler sunulmuştur. Diğer taraftan SOLID prensiplerine bağlı clean code olarak kodlanan bir projedir.**
 
-Core Layer
+**Core Layer
  
-Proje mimarisinin temel yapısnı oluşturan kısımlarının yer aldığı katmandır. Proje bağımlı olmayan bir katman olup plug-and-play mantığıyla geliştirilmiş modüler bir yapıya sahiptir. AOP mimarisi gereği oluşturulan cross cutting concernler (caching, exception handling, performance, transaction gibi yapılar) bu katmanda yer almaktadır, bu sayede uygulama genelinde (bir veya birden fazla katmanda yer alabilecek caching, validation, logging gibi yapılar) kullanılacak yapıların sistemden soyutlanıp enkapsüle edilerek istenen katmanda kullanılabilmesini sağlamaktadır. Veri erişimi için Entity framework repository soyutlamaları ve generic yapıda bu katmanda yer almaktadır, diğer bir taraftan yer alan extensionlar sayesinde metodlar genişletilerek mimariye ve ihtiyaçlara uygun hale getirilmiştir. Ayrıca katman içindeki utilities (araçlar) içinde, mail yönetimi, iş kuralları yönetimi, interceptor yönetimi, güvenlik ve IoC (Inversion of Control) gibi temel yapılar yönetilmektedir.
+Proje mimarisinin temel yapısnı oluşturan kısımlarının yer aldığı katmandır.Caching, exception handling, performance, transaction,log gibi yapılar bu katmanda yer almaktadır. Veri erişimi için Entity framework repository soyutlamaları ve generic yapıda bu katmanda yer almaktadır, diğer bir taraftan yer alan extensionlar sayesinde metodlar genişletilerek mimariye ve ihtiyaçlara uygun hale getirilmiştir. Ayrıca katman içindeki utilities içinde, iş kuralları yönetimi, interceptor yönetimi, güvenlik ve IoC  gibi temel yapılar yönetilmektedir.
  
-Data Access Layer
+**Data Access Layer
  
-Veri tabanı işlemlerinin yapıldığı katmandır, temel görevi veriye erişmek ve ekleme, silme, güncelleme gibi temel işlemlerin yerine getirilmesidir. Ayrıca projede Entity Framework kullanıldığı için data context, migrations ve entityler arasındaki mapping (db üzerindeki mappingler), annotations ve relations gibi operasyonlar yer almaktadır.
+Veri tabanı işlemlerinin yapıldığı katmandır, temel görevi veriye erişmek ve ekleme, silme, güncelleme gibi temel işlemlerin yerine getirilmesidir.
  
-Business Layer
+**Business Layer
  
-Sunum katmanından (Api katmanı) gelen isteklerin ve verilerin işlendiği, uygulamada mantık işlemlerinin ve veri manipülasyonlarının işlendiği katmandır. Genelde projelerde authorization işlemleri api katmanında yapılmasına karşılık olarak, bu projede iş katmanında işlenmektedir, authorization işlemlerinin bu katmanda işlenmesi ise ileride yazılacak olan bir android, ios, wearable gibi teknolojiler için geliştirilebilecek farklı arayüzlerde tekrar tekrar authorization işlemlerinin yapılmasının önüne geçmeyi hedefleyerek tek bir merkezi noktadan yönetilmesi hedeflenmiştir. İş mantıklarına göre oluşturulan servisler Autofac ile IoC conteinar'a dahil edilmiştir bu sayede servisler istenen yerlerde inject (constructurdan) edilerek kullanılabilir hale gelmiştir. Asp .Net Core'un sunmuş olduğu built-in dependenct injection desteği yerine Autofac teknolojisi kullanılarak nesnelerin yaşam döngülerinin hem daha yetenekli hem de daha yüksek performanslı (Ioc performance comparison) bir araçla kontrol edilmesi amaçlanmış ve kodda basitlik ve sadelik sağlanmıştır, bunlara ek olarak Autofac ile gelen castle dynamic proxy sayesinde AOP mimarisi çerçevesinde metodların ve sınıfların intercept edilebilmesini sağlayan yapı geliştirilmiştir.
+Api katmanından gelen isteklerin ve verilerin işlendiği katmandır. Asp .Net Core'un sunmuş olduğu built-in dependenct injection desteği yerine Autofac teknolojisi kullanılarak nesnelerin yaşam döngülerinin hem daha yetenekli hem de daha yüksek performanslı bir araçla kontrol edilmesi amaçlanmış ve kodda basitlik ve sadelik sağlanmıştır, bunlara ek olarak Autofac ile gelen castle dynamic proxy sayesinde AOP mimarisi çerçevesinde metodların ve sınıfların intercept edilebilmesini sağlayan yapı geliştirilmiştir.
  
-API (Presentation) Layer
+**API Layer
  
-Projede kullanıcı veya arayüzle iletişimde olan kısımların tümünü içeren katmandır. Kiralamax projesinin back-end tarafı web api olup çeşitli platformlarda arayüz geliştirilebilmesine olanak sağlamaktadır, api katmanı temel olarak gelen ve giden verilerin mantıklarının sağlandığı ve controllers üzerinden belli ihtiyaçlar ve işlevler için oluşturulmuş metodlardan oluşmaktadır. Bu katmanda ayrıca verilerin maplenmesi için automapper teknolojisi kullanılmıştır bu sayede kodun basitleştirilmesi ve sadeleştirilmesi amaçlanmıştır. Ayrıca front-end tarafından gelen file dataları(statik dosyalar) bu katmanda tutulur ve bu dataların I/O işlemleri için yardımcı metodlar içermektedir. Ayrıca proje yapılandırmaları direkt olarak startup içine yazılmak yerine extension metodlarda ayrıştırılarak kodun sadeleştirilmesi amaçlanmıştır.
+Projede kullanıcı veya arayüzle iletişimde olan kısımların tümünü içeren katmandır.Projesinin back-end tarafı web api olup çeşitli platformlarda arayüz geliştirilebilmesine olanak sağlamaktadır, api katmanı temel olarak gelen ve giden verilerin mantıklarının sağlandığı ve controllers üzerinden belli ihtiyaçlar ve işlevler için oluşturulmuş metodlardan oluşmaktadır.
+
 ## :pushpin:Getting Started
 ![About](https://user-images.githubusercontent.com/34273337/112353263-a42c6a00-8cdc-11eb-9c99-f24a3f2cc1bd.png)
 
