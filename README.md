@@ -3,6 +3,9 @@
 ## <p align="center"> ![Rent-Car](https://user-images.githubusercontent.com/34273337/112353462-ce7e2780-8cdc-11eb-8bc9-56a9f8d6bc0d.jpg)</p>
 **N-Katmanlı mimari yapısı ile hazırlanmış,OOP(Object orianted progrraming), AOP (Aspect Oriented Programming) gibi programlama modelleriyle çeşitli sorunlara çözümler sunulmuştur. Diğer taraftan SOLID prensiplerine bağlı clean code olarak kodlanan bir projedir.**
 
+**Business Layer**
+ 
+Api katmanından gelen isteklerin ve verilerin işlendiği katmandır. Asp .Net Core'un sunmuş olduğu built-in dependenct injection desteği yerine Autofac teknolojisi kullanılarak nesnelerin yaşam döngülerinin hem daha yetenekli hem de daha yüksek performanslı bir araçla kontrol edilmesi amaçlanmış ve kodda basitlik ve sadelik sağlanmıştır, bunlara ek olarak Autofac ile gelen castle dynamic proxy sayesinde AOP mimarisi çerçevesinde metodların ve sınıfların intercept edilebilmesini sağlayan yapı geliştirilmiştir.
 **Core Layer**
  
 Proje mimarisinin temel yapısnı oluşturan kısımlarının yer aldığı katmandır.Caching, exception handling, performance, transaction,log gibi yapılar bu katmanda yer almaktadır. Veri erişimi için Entity framework repository soyutlamaları ve generic yapıda bu katmanda yer almaktadır, diğer bir taraftan yer alan extensionlar sayesinde metodlar genişletilerek mimariye ve ihtiyaçlara uygun hale getirilmiştir. Ayrıca katman içindeki utilities içinde, iş kuralları yönetimi, interceptor yönetimi, güvenlik ve IoC  gibi temel yapılar yönetilmektedir.
@@ -10,10 +13,6 @@ Proje mimarisinin temel yapısnı oluşturan kısımlarının yer aldığı katm
 **Data Access Layer**
  
 Veri tabanı işlemlerinin yapıldığı katmandır, temel görevi veriye erişmek ve ekleme, silme, güncelleme gibi temel işlemlerin yerine getirilmesidir.
- 
-**Business Layer**
- 
-Api katmanından gelen isteklerin ve verilerin işlendiği katmandır. Asp .Net Core'un sunmuş olduğu built-in dependenct injection desteği yerine Autofac teknolojisi kullanılarak nesnelerin yaşam döngülerinin hem daha yetenekli hem de daha yüksek performanslı bir araçla kontrol edilmesi amaçlanmış ve kodda basitlik ve sadelik sağlanmıştır, bunlara ek olarak Autofac ile gelen castle dynamic proxy sayesinde AOP mimarisi çerçevesinde metodların ve sınıfların intercept edilebilmesini sağlayan yapı geliştirilmiştir.
  
 **API Layer**
  
