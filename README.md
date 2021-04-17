@@ -1,10 +1,28 @@
 #  **Araç Kiralama Projesi**
 
 ## <p align="center"> ![Rent-Car](https://user-images.githubusercontent.com/34273337/112353462-ce7e2780-8cdc-11eb-8bc9-56a9f8d6bc0d.jpg)</p>
-**N-Katmanlı mimari yapısı ile hazırlanmış, EntityFramework kullanılarak CRUD işlemlerinin yapıldığı,Web APİ,AOP,JWT ile doğrulama,Cache,Logging,Performance,Transactions yapısını içeren bir projedir.**
+**N-Katmanlı mimari yapısı ile hazırlanmış,OOP(Object orianted progrraming), AOP (Aspect Oriented Programming) gibi programlama modelleriyle çeşitli sorunlara çözümler sunulmuştur. Diğer taraftan SOLID prensiplerine bağlı clean code olarak kodlanan bir projedir.**
 
-## :pushpin:Getting Started
 ![About](https://user-images.githubusercontent.com/34273337/112353263-a42c6a00-8cdc-11eb-9c99-f24a3f2cc1bd.png)
+
+**Business Layer**
+ 
+Api katmanından gelen isteklerin ve verilerin işlendiği katmandır. Asp .Net Core'un sunmuş olduğu built-in dependenct injection desteği yerine Autofac teknolojisi kullanılarak nesnelerin yaşam döngülerinin hem daha yetenekli hem de daha yüksek performanslı bir araçla kontrol edilmesi amaçlanmış ve kodda basitlik ve sadelik sağlanmıştır, bunlara ek olarak Autofac ile gelen castle dynamic proxy sayesinde AOP mimarisi çerçevesinde metodların ve sınıfların intercept edilebilmesini sağlayan yapı geliştirilmiştir.
+
+**Core Layer**
+ 
+Proje mimarisinin temel yapısnı oluşturan kısımlarının yer aldığı katmandır.Caching, exception handling, performance, transaction,log gibi yapılar bu katmanda yer almaktadır. Veri erişimi için Entity framework repository soyutlamaları ve generic yapıda bu katmanda yer almaktadır, diğer bir taraftan yer alan extensionlar sayesinde metodlar genişletilerek mimariye ve ihtiyaçlara uygun hale getirilmiştir. Ayrıca katman içindeki utilities içinde, iş kuralları yönetimi, interceptor yönetimi, güvenlik ve IoC  gibi temel yapılar yönetilmektedir.
+ 
+**Data Access Layer**
+ 
+Veri tabanı işlemlerinin yapıldığı katmandır, temel görevi veriye erişmek ve ekleme, silme, güncelleme gibi temel işlemlerin yerine getirilmesidir.
+ 
+**WEB API**
+ 
+Projede kullanıcı veya arayüzle iletişimde olan kısımların tümünü içeren katmandır.Projesinin back-end tarafı web api olup çeşitli platformlarda arayüz geliştirilebilmesine olanak sağlamaktadır, api katmanı temel olarak gelen ve giden verilerin mantıklarının sağlandığı ve controllers üzerinden belli ihtiyaçlar ve işlevler için oluşturulmuş metodlardan oluşmaktadır.
+
+
+
 
 ## Used Technologies and Their Versions
 [![C-Sharp](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)](https://docs.microsoft.com/en-us/dotnet/csharp/)
@@ -14,6 +32,10 @@
 [![Autofac](https://img.shields.io/badge/Autofac%20v6.1-004880?style=for-the-badge&logo=nuget&logoColor=white)](https://autofac.org/)
 [![Fluent-Validation](https://img.shields.io/badge/Fluent%20Validation%20v9.5.1-004880?style=for-the-badge&logo=nuget&logoColor=white)](https://fluentvalidation.net/)
 [![log4net](https://img.shields.io/badge/log4net%20v2.0.12-004880?style=for-the-badge&logo=nuget&logoColor=white)
+
+## :pushpin:Veritabanı
+![7](https://user-images.githubusercontent.com/34273337/114322293-02a07780-9b28-11eb-8d00-2c4ff4acf462.PNG)
+
 ## :pushpin:Screenshot
 
 ### Kullanıcı yaptığı istek  için yetkilendirilmemiş ise "Yetkiniz Yok" hatası almaktadır.
